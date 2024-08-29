@@ -14,7 +14,7 @@ type TQueryParams = {
 };
 
 const PRICE_CACHE_KEY = 'swsCompanyPriceClose';
-const PRICE_CACHE_EXPIRATION = 80000; // Set cache expiration such that prices update one per day
+const PRICE_CACHE_EXPIRATION = 80000000; // Set cache expiration such that prices update one per day
 
 /**
  * Retrieves cached price data or queries the database and caches the result.
