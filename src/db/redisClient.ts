@@ -1,34 +1,3 @@
-//import { createClient } from 'redis';
-//
-//import { APP_REDIS_CLIENT_URL } from '../config.js';
-//
-//const redisClient = createClient({
-//    url: APP_REDIS_CLIENT_URL
-//});
-//
-//redisClient.on('error', (error) => console.log('Redis Client Error', error));
-//
-//// Ensure the client is connected
-//redisClient.connect().catch((err) => {
-//    console.error('Failed to connect to Redis:', err);
-//});
-//
-//// Function to get data from cache
-//export async function getFromCache(key: string): Promise<any> {
-//    const cachedData = await redisClient.get(key);
-//    return cachedData ? JSON.parse(cachedData) : null;
-//}
-//
-//// Function to set data in cache with expiration
-//export async function setInCache(
-//    key: string,
-//    data: any,
-//    expiration: number
-//): Promise<void> {
-//    await redisClient.setEx(key, expiration, JSON.stringify(data));
-//}
-
-
 import { createClient } from 'redis';
 import type { RedisClientType } from 'redis';
 import { APP_REDIS_CLIENT_URL } from '../config.js';
